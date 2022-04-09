@@ -1,22 +1,34 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int	main(void)
+int cmpnum(const void *n1, const void *n2)
+{
+	if (*(int *)n1 > *(int *)n2)
+		return -1;
+	else if (*(int *)n1 < *(int *)n2)
+		return 1;
+	else
+		return (0);
+}
+
+int main(void)
 {
 	int n, k, x;
+	int *a;
 	int i, j, sum;
 
 	i = 0;
 	j = 0;
 	sum = 0;
 	scanf("%d %d %d", &n, &k, &x);
-	int a[n];
-	// a = (int *)malloc(sizeof(int) * n);
-	//store numbers
+	a = (int *)malloc(sizeof(int) * n);
+
+	// store numbers
 	while (i < n)
 	{
-		scanf("%d",a[i]);
-		// a++;
+		// scanf("%d", a);
+		scanf("%d", &a[i]);
+		// a += 4;
 		i++;
 	}
 
@@ -31,14 +43,29 @@ int	main(void)
 	}
 
 	if (k > n)
-		return 0;
+	{
+		printf("%d\n", 0);
+		return (0);
+	}
 
-	while (j > 0)
+	qsort(a, n, sizeof(int), cmpnum);
+	i = 0;
+	while (k > 0)
+	{
+		a[i] = 0;
+		k--;
+		i++;
+	}
+
+	j = 0;
+	while (j < n)
 	{
 		sum += a[j];
+		j++;
 	}
-	printf("%ld", sizeof(*a)/sizeof(a[0]));
-	printf("%d", sum);
+
+	printf("%d\n", sum);
 
 	free(a);
+	return (0);
 }
