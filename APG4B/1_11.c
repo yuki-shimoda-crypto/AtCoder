@@ -18,33 +18,31 @@
 int main(void)
 {
 	int n, a, b;
-	char *op;
+	char op;
 
-	scanf_s("%d%d", &n, &a);
-	printf("n = %d, a = %d\n", n, a);
+	scanf("%d%d", &n, &a);
 	for (int i = 0; i < n; i++)	
 	{
-		scanf_s("%c %d", op, &b);
-		printf("op = %c, b = %d\n", *op, b);
-		if (*op == '+')
+		scanf(" %c%d", &op, &b);
+		if (op == '+')
 		{
 			a += b;
-			printf("%d:%d\n", i, a);
+			printf("%d:%d\n", i + 1, a);
 		}
-		else if (*op == '-')
+		else if (op == '-')
 		{
 			a -= b;
-			printf("%d:%d\n", i, a);
+			printf("%d:%d\n", i + 1, a);
 		}
-		else if (*op == '*')
+		else if (op == '*')
 		{
 			a *= b;
-			printf("%d:%d\n", i, a);
+			printf("%d:%d\n", i + 1, a);
 		}
-		else if (*op == '/' && b != 0)
+		else if (op == '/' && b != 0)
 		{
 			a /= b;
-			printf("%d:%d\n", i, a);
+			printf("%d:%d\n", i + 1, a);
 		}
 		else
 		{	
