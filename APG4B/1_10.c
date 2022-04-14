@@ -81,14 +81,36 @@
 // 	return (0);
 // }
 
+// int main(void)
+// {
+// 	int n = 5;
+// 	rep(i, n)
+// 	{
+// 		printf("i = %d, n = %d\n", i, n);
+// 		n--;
+// 		i++;
+// 	}
+// 	return (0);
+// }
+
 int main(void)
 {
-	int n = 5;
-	rep(i, n)
+	int a, b;
+
+	scanf("%d %d", &a, &b);
+	printf("A:");
+	while (0 < a)
 	{
-		printf("i = %d, n = %d\n", i, n);
-		n--;
-		i++;
+		printf("]");
+		a--;
 	}
-	return (0);
+	printf("\n");
+
+	printf("B:");
+	while (0 < b)
+	{
+		printf("]");
+		b--;
+	}
+	printf("\n");
 }
