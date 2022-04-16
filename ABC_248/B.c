@@ -21,8 +21,8 @@ int main(void)
 {
 	int a, b, k, i;
 	
-	if (scanf("%d %d %d", &a, &b, &k) )
-	;
+	scanf("%d %d", &a, &b);
+	if(scanf("%d",&k) != 2)
 	i = 0;
 	while (a < b)
 	{
