@@ -19,7 +19,7 @@
 
 int main(void)
 {
-	int a, b, k, i;
+	unsigned int a, b, k, i;
 	
 	if (scanf("%d %d %d", &a, &b, &k) )
 	;
