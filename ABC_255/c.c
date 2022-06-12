@@ -7,9 +7,6 @@
 int main(void)
 {
     long x, a, d, n;
-	long now;
-	long num;
-	long loop;
 	scanf("%ld%ld%ld%ld", &x, &a, &d, &n);
 
 	// if (abs(x - a) < d)
@@ -33,12 +30,14 @@ int main(void)
 
 
 
-	long min = 1;
-	long max = n;
+	long num;
+	long min = 0;
+	long max = n - 1;
 	long mid;
 
 	while (min <= max)
 	{
+
 		mid = (min + max) / 2;
 		num = a + d * mid;
 		if (x == num)
@@ -46,25 +45,41 @@ int main(void)
 			printf("%d\n", 0);
 			return 0;
 		}
-		else if (num < x)
+		if (abs(d) > abs(x - num))
+			break;
+		if (d >= 0)
 		{
-			min = mid + 1;
+			if (num < x)
+			{
+				min = mid + 1;
+			}
+			else
+			{
+				max = mid - 1;
+			}
 		}
 		else
 		{
-			max = mid - 1;
+			if (num > x)
+			{
+				min = mid + 1;
+			}
+			else
+			{
+				max = mid - 1;
+			}
 		}
+
 	}
-	if (d > 0)
-	{
-	if (x < 0)
+	if (x < 0 && d >= 0)
 		x += d;
-	}
+	if (x < 0 && d < 0)
+		x -= d;
 
 	if (x >= num)
 		printf("%ld\n", x - num);
 	else
-		printf("%ld\n", num - x);
+		printf("%ld\n", num - x);	
 	
 	// while (x - a < len)
 	// {
