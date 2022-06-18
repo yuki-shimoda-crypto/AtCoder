@@ -17,7 +17,7 @@ int main(void)
 	while (num < 6)
 	{
 		printf("%s", str);
-		num += len;  
+		num += len;   
 	}
 		printf("\n");
 		
