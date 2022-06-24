@@ -17,6 +17,7 @@ int main(void)
 	{
 		*table = (char *)malloc(sizeof(char) * (b * n + 1));
 	}
+
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < a; j++)
@@ -38,7 +39,11 @@ int main(void)
 			}
 			printf("\n");		
 		}
-		flag = flag ? false : true;
+		if ((n % 2 == 0))
+		{
+			flag = flag ? false : true;
+		}
+		
 	}
 	
 	return (0);
