@@ -8,9 +8,18 @@
 int main(void)
 {
 	int n, x;
-	char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char *s;
 
 	scanf("%d%d", &n, &x);
-	printf("%c\n", alphabet[x/n + 1]);
+	s = (char *)malloc(sizeof(char) * (n * 26 + 1));
+	for (int i = 0; i < 26; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			s[i * n + j] = 'A' + i;
+		}
+		
+	}
+	printf("%c\n", s[x - 1]);
 	return (0);
 }
