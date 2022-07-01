@@ -15,11 +15,11 @@ int main(void)
 	t2 = c * 60 + d + 1;
 	if (t1 < t2)
 	{
-		printf("Takahashi\n")
+		printf("Takahashi\n");
 	}
 	else
 	{
-		printf("Aoki\n")
+		printf("Aoki\n");
 	}
 	
 	return (0);
