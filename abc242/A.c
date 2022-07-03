@@ -11,11 +11,16 @@ int main(void)
 
 	scanf("%lf%lf%lf%lf", &a, &b, &c, &x);
 
-	if (/* condition */)
+	if (a >= x)
 	{
-		/* code */
+		printf("%lf\n", 1.0);
 	}
+	else if (b >= x)
+	{
+		printf("%lf\n", c/(b - a));
+	}
+	else
+		printf("%lf\n", 0.0);
 	
-	printf("%lf", (a + c)/ )
 	return (0);
 }
