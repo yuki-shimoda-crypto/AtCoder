@@ -7,18 +7,14 @@
 
 int main(void)
 {
-	int a[10];
-	int tmp = 0;
+	int a, b;
 
-	for (int i = 0; i < 10; i++)
-		scanf("%d", &a[i]);
-	
-	for (int i = 0; i < 3; i++)
-	{
-		tmp = a[tmp];
-	}
-	printf("%d\n", tmp);
-	
-
+	scanf("%d%d", &a, &b);
+	if ((a == 1 && b == 10) || (a == 10 && b == 1))
+		printf("Yes\n");
+	else if (abs(a - b) == 1)
+		printf("Yes\n");
+	else
+		printf("No\n");
 	return (0);
 }
