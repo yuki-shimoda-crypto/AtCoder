@@ -13,16 +13,14 @@ int main(void)
 	for (int i = 0; i < n; i++)
 		scanf("%lld", &a[i]);
 	
-	long long	sum_first = 0;
-	long long	sum_l;
-	double		average_first;
-	for (int i = 0; i < n; i++)
-		sum_first += a[i];
-	sum_l = n * l;
-	if (average_first > sum_l)
+	long long	sum_left[n];
+	long long	sum_right[n];
+	sum_left[0] = 0;
+	sum_right[0] = 0;
+	for (long long i = 1; i < n + 1; i++)
 	{
-		/* code */
+		sum_left[i] = l + sum_left[i - 1]
+		sum_right[i] = l + sum_right[i - 1]
 	}
-	
 	return (0);
 }

@@ -15,12 +15,10 @@ int main(void)
 	
 	long long	tmp = n;
 	long long	flag = 0;
-	while (1)
+	while (p[n - 2] != 1)
 	{
 		n = p[n - 2];
 		flag++;
-		if (p[n - 2] == 1)
-			break;
 	}
 	printf("%lld\n", flag + 1);
 	return (0);
