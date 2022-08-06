@@ -7,18 +7,13 @@
 
 int main(void)
 {
-	long long	n, a, b;
+	long long	n, m;
+	scanf("%lld%lld", &n, &m);
+	long long	u[m], v[m];
 
-	scanf("%lld%lld%lld", &n, &a, &b);
-	if (n >= a && a < b)
-	{
-		printf("%lld\n",n / a);
-	}
-	else if (n > )
-	{
-
-	}
+	for (int i = 0; i < m; i++)
+		scanf("%lld%lld", &u[i], &v[i]);
 	
-
+	printf
 	return (0);
 }
