@@ -8,6 +8,7 @@
 int main(void)
 {
 	int n, k, q;
+	a
 	
 
 	return (0);
